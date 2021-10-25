@@ -44,8 +44,17 @@ class Member extends Person implements User {
         Gender: ${this.gender}
         `
     }
+
+    getInfo(){
+        return `
+            this.firstName = ${prompt('What is your first name?')}
+            this.lasttName = ${prompt('What is your last name?')}
+            this.age = ${prompt('What is your age?')}
+            this.gender = ${prompt('What is your gender?')}
+        `
+    }
 }
 
 const newMember = new Member('Benedict','Jokanola',12,'male');
-newMember.getFullDetails();
+newMember.getInfo();
 console.log(newMember)
