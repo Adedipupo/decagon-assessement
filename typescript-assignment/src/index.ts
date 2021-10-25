@@ -56,3 +56,5 @@ class Member extends Person implements User {
 const newMember = new Member();
 newMember.getInfo();
 console.log(newMember)
+
+document.addEventListener()

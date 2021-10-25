@@ -54,3 +54,4 @@ var Member = /** @class */ (function (_super) {
 var newMember = new Member();
 newMember.getInfo();
 console.log(newMember);
+document.;
