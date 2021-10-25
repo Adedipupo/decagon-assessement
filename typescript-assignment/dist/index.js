@@ -28,6 +28,10 @@ var Person = /** @class */ (function () {
 var Member = /** @class */ (function (_super) {
     __extends(Member, _super);
     function Member(firstName, lastName, age, gender) {
+        if (firstName === void 0) { firstName = ""; }
+        if (lastName === void 0) { lastName = ""; }
+        if (age === void 0) { age = 0; }
+        if (gender === void 0) { gender = ""; }
         var _this = _super.call(this, firstName, lastName, age) || this;
         _this.firstName = firstName;
         _this.lastName = lastName;
@@ -39,11 +43,14 @@ var Member = /** @class */ (function (_super) {
         return "Your details are : \n        Name: " + (this.firstName + this.lastName) + "\n        Age: " + this.age + "\n        Gender: " + this.gender + "\n        ";
     };
     Member.prototype.getInfo = function () {
-        "\n        this.firstName = " + prompt('What is your first name?') + "\n        this.lasttName = " + prompt('What is your last name?') + "\n        this.age = " + prompt('What is your age?') + "\n        this.gender = " + prompt('What is your gender?') + "\n        ";
+        this.firstName = "" + prompt('What is your first name?');
+        this.lastName = "" + prompt('What is your last name?');
+        this.age = Number("" + prompt('What is your age?'));
+        this.gender = "" + prompt('What is your gender?');
         return this.getFullDetails();
     };
     return Member;
 }(Person));
-var newMember = new Member(firstName, lastName, age, gender);
+var newMember = new Member();
 newMember.getInfo();
 console.log(newMember);

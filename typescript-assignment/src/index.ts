@@ -28,7 +28,7 @@ class Person {
 class Member extends Person implements User {
     gender: string;
 
-    constructor(firstName: string, lastName: string, age: number,gender: string) {  
+    constructor(firstName: string ="", lastName: string ="", age: number = 0,gender: string = "") {  
         super(firstName,lastName,age);  
         this.firstName = firstName;
         this.lastName = lastName;
@@ -44,16 +44,15 @@ class Member extends Person implements User {
         `
     }
     getInfo(){
-        `
-        this.firstName = ${prompt('What is your first name?')}
-        this.lasttName = ${prompt('What is your last name?')}
-        this.age = ${prompt('What is your age?')}
-        this.gender = ${prompt('What is your gender?')}
-        `
+        this.firstName = `${prompt('What is your first name?')}`
+        this.lastName = `${prompt('What is your last name?')}`
+        this.age = Number(`${prompt('What is your age?')}`)
+        this.gender = `${prompt('What is your gender?')}`
+        
         return this.getFullDetails()
     }
 }
 
-const newMember = new Member('Benedict','Jokanola',12,'male');
+const newMember = new Member();
 newMember.getInfo();
 console.log(newMember)
