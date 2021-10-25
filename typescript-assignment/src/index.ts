@@ -35,4 +35,17 @@ class Member extends Person implements User {
         this.age = age;
         this.gender = gender;
     }
+
+    
+    getFullDetails():string {
+        return `Your details are : 
+        Name: ${this.firstName + this.lastName}
+        Age: ${this.age}
+        Gender: ${this.gender}
+        `
+    }
 }
+
+const newMember = new Member('Benedict','Jokanola',12,'male');
+newMember.getFullDetails();
+console.log(newMember)
