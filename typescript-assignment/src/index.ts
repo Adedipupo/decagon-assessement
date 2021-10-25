@@ -35,22 +35,20 @@ class Member extends Person implements User {
         this.age = age;
         this.gender = gender;
     }
-
     
+    getInfo(){
+        return `
+        this.firstName = ${prompt('What is your first name?')}
+        this.lasttName = ${prompt('What is your last name?')}
+        this.age = ${prompt('What is your age?')}
+        this.gender = ${prompt('What is your gender?')}
+        `
+    }
     getFullDetails():string {
         return `Your details are : 
         Name: ${this.firstName + this.lastName}
         Age: ${this.age}
         Gender: ${this.gender}
-        `
-    }
-
-    getInfo(){
-        return `
-            this.firstName = ${prompt('What is your first name?')}
-            this.lasttName = ${prompt('What is your last name?')}
-            this.age = ${prompt('What is your age?')}
-            this.gender = ${prompt('What is your gender?')}
         `
     }
 }

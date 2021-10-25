@@ -35,11 +35,11 @@ var Member = /** @class */ (function (_super) {
         _this.gender = gender;
         return _this;
     }
+    Member.prototype.getInfo = function () {
+        return "\n        this.firstName = " + prompt('What is your first name?') + "\n        this.lasttName = " + prompt('What is your last name?') + "\n        this.age = " + prompt('What is your age?') + "\n        this.gender = " + prompt('What is your gender?') + "\n        ";
+    };
     Member.prototype.getFullDetails = function () {
         return "Your details are : \n        Name: " + (this.firstName + this.lastName) + "\n        Age: " + this.age + "\n        Gender: " + this.gender + "\n        ";
-    };
-    Member.prototype.getInfo = function () {
-        return "\n            this.firstName = " + prompt('What is your first name?') + "\n            this.lasttName = " + prompt('What is your last name?') + "\n            this.age = " + prompt('What is your age?') + "\n            this.gender = " + prompt('What is your gender?') + "\n        ";
     };
     return Member;
 }(Person));
