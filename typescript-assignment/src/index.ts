@@ -57,4 +57,4 @@ const newMember = new Member();
 newMember.getInfo();
 console.log(newMember)
 
-document.addEventListener()
+// document.addEventListener()
